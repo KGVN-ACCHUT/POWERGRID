@@ -1,3 +1,4 @@
+# Took the data of 5 years electtical demand. Used four years for the taining period and used last one year for the testing
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
