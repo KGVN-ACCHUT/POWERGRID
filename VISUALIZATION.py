@@ -1,12 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
-
 def demand_visualization():
     csv_file_path = r'C:\Users\achyu\Downloads\ANDHRA PRADESH DATA.csv'
-    df = pd.read_csv(csv_file_path)
-    df.columns = df.columns.str.strip()
-    date_column_name = 'DATE'
+    df = pd.read_csv(csv_file_path) # COMMAND TO LOAD THE DATA
+    df.columns = df.columns.str.strip() # COMMAND TO REMOVE THE EMPTY SPACES
+    date_column_name = 'DATE' 
     demand_column_name = 'ENERGY DEMAND'
     df[date_column_name] = pd.to_datetime(df[date_column_name], format="%d-%m-%Y")
     df.set_index(date_column_name, inplace=True)
@@ -21,6 +20,5 @@ def demand_visualization():
     plt.xticks(rotation=360)
     plt.tight_layout()
     plt.show()
-
 if __name__ == "__main__":
     demand_visualization()
