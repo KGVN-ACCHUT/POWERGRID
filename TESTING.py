@@ -46,5 +46,6 @@ def testing():
     print("\n2. The demand percentage drop would be:")
     print(f"\t{demand_percentage_drop:.2f}%%")
     print("=" * 60)
+
 if __name__ == "__main__":
     testing()
